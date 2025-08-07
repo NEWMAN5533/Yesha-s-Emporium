@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: linear-gradient(-25deg, #e6e8ec, #fff);
+  --dark-color: #0a0a0c;
+  --light-color: #fff;
+  --primary-color: #eb443e;
+  --border-color: rgb(139, 137, 137);
+  --btn-color:  rgb(179, 30, 159);
+}
+
+body {
+  background: var(--light-color);
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f3f1f1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav .left,
+nav .right {
+  display: flex;
+  align-items: center;
+}
+
+nav .left img,
+nav .right img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .left h2 {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 5rem;
+  background: transparent;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: rgb(6, 55, 128);
+}
+
+
+
+
+.hero-left .hero-text{
+  padding-bottom: 6rem;
+}
+
+.hero-left p {
+  font-size: 1.4rem;
+  color: var(--dark-color);
+}
+
+
+.hero-left {
+  flex: 1;
+  width: 20rem;
+  height: 20rem;
+  background: transparent;
+  padding-right: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border: none;
+  position: absolute;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+
+
+/* BUTTON */
+button {
+  display: inline-block;
+  background: var(--light-color);
+  padding: 0.5rem 2.4rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+    border: 1px solid var(--dark-color);
+    color: var();
+    font-size: 1rem;
+    text-align: center;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: transparent;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+}
+
+/* MAIN GRID */
+main {
+  padding: 1rem 1rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  left: 0;
+  margin: 1rem;
+  ;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  background: #e08cdc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.card-left{
+  width: 20rem;
+  height: 15rem;
+  top: 0;
+  background: transparent;
+  border-radius: 1rem;
+}
+
+.card-left img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-right {
+  padding: 1rem;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.card-right h2{
+  color: rgb(15, 15, 17);
+  margin-bottom: 1rem;
+}
+
+.card-right i{
+  color: rgb(241, 245, 7);
+}
+
+.card-right p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.card-right button {
+  width: 70%;
+  height: 2.5rem;
+  margin-top: 2rem;
+}
+
+.product-video{
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  nav {
+    height: 4rem;
+  }
+
+  nav .left h2 {
+    display: none;
+  }
+
+  nav .left img,
+  nav .right img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .hero-left {
+    margin-top: 5rem;
+  }
+
+  .hero-overlay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 1rem;
+  }
+}
